@@ -2,7 +2,7 @@
     "name": "frontend-challenge",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://hillel1408.github.io/frontend-challenge/",
+    "homepage": "https://vegvisir46.github.io/cats_API/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.3.0",
