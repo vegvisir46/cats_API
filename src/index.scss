@@ -1,0 +1,93 @@
+.container {
+    max-width: 1440px - 124px;
+    margin: 0 auto;
+    @media (max-width: 1356px) {
+        padding: 0 20px;
+        max-width: none;
+    }
+}
+.header {
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+    margin-bottom: 52px;
+    &__nav {
+        display: flex;
+        @media (max-width: 375px) {
+            justify-content: center;
+        }
+        &-link {
+            display: block;
+            background-color: transparent;
+            font-size: 14px;
+            line-height: 21 / 14 * 100%;
+            letter-spacing: 0.25px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 23px 18px;
+            &.active {
+                color: white;
+                background-color: #1e88e5;
+            }
+        }
+    }
+}
+.main {
+    &__images {
+        padding: 0 0 48px 0;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+        &-block {
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            @media (any-hover: hover) {
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24),
+                        0px 9px 18px rgba(0, 0, 0, 0.18);
+                    transform: scale(1.06666);
+                    .main__images-icon {
+                        display: block;
+                    }
+                    .main__images-icon_hover.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &-img {
+            width: 100%;
+            height: 225px;
+            object-fit: cover;
+        }
+        &-icon {
+            width: 40px;
+            position: absolute;
+            bottom: 28px;
+            right: 28px;
+            display: none;
+            @media (any-hover: hover) {
+                &:hover {
+                    & + i {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &-icon_hover {
+            width: 40px;
+            position: absolute;
+            bottom: 28px;
+            right: 28px;
+            display: none;
+            &.visible-active {
+                display: block;
+            }
+        }
+    }
+    &__preloader {
+        padding: 0 0 31px 0;
+        &-text {
+            text-align: center;
+        }
+    }
+}
